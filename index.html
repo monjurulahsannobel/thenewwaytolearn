@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The New Way to Learn - VR Math Learning</title>
+    <title>VR Math Learning - The New Way to Learn</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
@@ -11,12 +11,13 @@
     <header>
         <div class="logo">VR Learn</div>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#partners">Partners</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
         </nav>
     </header>
     
@@ -29,35 +30,24 @@
     </section>
     
     <section id="gallery">
-        <h2>Explore the VR Learning Experience</h2>
+        <h2>Interactive Learning in Action</h2>
         <div class="gallery-container">
-            <div id="gallery" class="gallery">
-                <img src="images/kids_learning_1.jpg" alt="Kids Learning">
-                <img src="images/kids_learning_2.jpg" alt="Kids Learning">
-                <img src="images/kids_learning_3.jpg" alt="Kids Learning">
-                <img src="images/kids_learning_4.jpg" alt="Kids Learning">
-                <img src="images/kids_learning_5.jpeg" alt="Kids Learning">
-                <img src="images/kids_learning_6.jpg" alt="Kids Learning">
-            </div>
+            <!-- Gallery images dynamically loaded via JS -->
         </div>
     </section>
     
     <section id="partners">
-        <h2>Our Valued Partners</h2>
-        <div class="partners">
-            <img src="images/western_panthers_logo.svg" alt="Western Panthers">
-            <img src="images/hamilton_heights_logo.png" alt="Hamilton Heights">
-        </div>
+        <h2>Our Partners</h2>
+        <p>Trusted by leading educational organizations.</p>
     </section>
     
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Interested in joining us? Reach out now.</p>
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta-button">Send Message</button>
+            <button type="submit">Send</button>
         </form>
     </section>
     
