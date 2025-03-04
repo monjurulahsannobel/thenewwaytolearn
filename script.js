@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const gallery = document.getElementById("gallery");
+    const gallery = document.querySelector(".gallery-container");
+    const navMenu = document.getElementById("nav-menu");
+    const menuToggle = document.querySelector(".menu-toggle");
 
     // Add images dynamically
     const galleryImages = [
@@ -15,8 +17,21 @@ document.addEventListener("DOMContentLoaded", function () {
         let img = document.createElement("img");
         img.src = imgSrc;
         img.alt = "Kids Learning";
+        img.classList.add("gallery-img");
+        img.addEventListener("click", () => openLightbox(imgSrc));
         gallery.appendChild(img);
     });
 
-    console.log("Gallery images loaded.");
+    function openLightbox(src) {
+        const lightbox = document.createElement("div");
+        lightbox.classList.add("lightbox");
+        lightbox.innerHTML = `<div class='lightbox-content'><img src='${src}'><span class='close'>&times;</span></div>`;
+        document.body.appendChild(lightbox);
+        document.querySelector(".close").addEventListener("click", () => lightbox.remove());
+    }
+
+    // Mobile Menu Toggle
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
 });
