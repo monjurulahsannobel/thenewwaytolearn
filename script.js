@@ -18,17 +18,5 @@ document.addEventListener("DOMContentLoaded", function () {
         gallery.appendChild(img);
     });
 
-    // Google Map Integration
-    window.initMap = function () {
-        const albany = { lat: 42.6526, lng: -73.7562 };
-        const nyc = { lat: 40.7128, lng: -74.0060 };
-
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 6,
-            center: albany
-        });
-
-        new google.maps.Marker({ position: albany, map: map, title: "Albany Learning Center" });
-        new google.maps.Marker({ position: nyc, map: map, title: "NYC Learning Center" });
-    };
+    console.log("Gallery images loaded.");
 });
