@@ -1,43 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.getElementById("gallery");
-    const partners = document.getElementById("partners");
 
-    // Add more images dynamically (Replace with your actual image paths)
+    // Add images dynamically
     const galleryImages = [
         "images/kids_learning_1.jpg",
         "images/kids_learning_2.jpg",
         "images/kids_learning_3.jpg",
-        "images/kids_learning_4.jpg",  // New Image
-        "images/kids_learning_5.jpeg",  // New Image
-        "images/kids_learning_6.jpg"   // New Image
+        "images/kids_learning_4.jpg",
+        "images/kids_learning_5.jpeg",
+        "images/kids_learning_6.jpg"
     ];
 
-    const partnerLogos = [
-        "images/western_panthers_logo.jpg",
-        "images/hamilton_heights_logo.jpg"
-    ];
-
-    // Create the moving slideshow for the gallery
-    let imgIndex = 0;
-    const imgElement = document.createElement("img");
-    imgElement.src = galleryImages[imgIndex];
-    imgElement.alt = "Kids Learning";
-    imgElement.classList.add("slideshow");
-    gallery.appendChild(imgElement);
-
-    function changeImage() {
-        imgIndex = (imgIndex + 1) % galleryImages.length;
-        imgElement.src = galleryImages[imgIndex];
-    }
-
-    // Change image every 3 seconds
-    setInterval(changeImage, 3000);
-
-    // Display partner logos
-    partnerLogos.forEach(imgSrc => {
+    galleryImages.forEach(imgSrc => {
         let img = document.createElement("img");
         img.src = imgSrc;
-        img.alt = "Partner School";
-        partners.appendChild(img);
+        img.alt = "Kids Learning";
+        gallery.appendChild(img);
     });
+
+    // Google Map Integration
+    window.initMap = function () {
+        const albany = { lat: 42.6526, lng: -73.7562 };
+        const nyc = { lat: 40.7128, lng: -74.0060 };
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 6,
+            center: albany
+        });
+
+        new google.maps.Marker({ position: albany, map: map, title: "Albany Learning Center" });
+        new google.maps.Marker({ position: nyc, map: map, title: "NYC Learning Center" });
+    };
 });
