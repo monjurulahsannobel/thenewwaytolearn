@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "images/kids_learning_2.jpg",
         "images/kids_learning_3.jpg",
         "images/kids_learning_4.jpg",  // New Image
-        "images/kids_learning_5.jpg",  // New Image
+        "images/kids_learning_5.jpeg",  // New Image
         "images/kids_learning_6.jpg"   // New Image
     ];
 
