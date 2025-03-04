@@ -22,8 +22,6 @@ header {
     left: 0;
     backdrop-filter: blur(10px);
     z-index: 1000;
-    box-sizing: border-box;
-    overflow: hidden;
 }
 
 .logo {
@@ -37,8 +35,6 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
 }
 
 nav ul li {
@@ -100,38 +96,16 @@ nav ul li a:hover {
     background: #fff;
 }
 
-/* Experience Centers Section */
-#experience {
-    padding: 50px;
-    background: #1a1a1a;
-}
-
-.experience-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.experience-box {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-    max-width: 300px;
-}
-
-/* Gallery Section (Hidden Extra Images) */
+/* Gallery Section */
 #gallery {
     padding: 50px;
     background: #1a1a1a;
 }
 
 .gallery-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
-    overflow: hidden;
 }
 
 .gallery-container img {
