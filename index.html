@@ -10,19 +10,24 @@
 <body>
     <header>
         <h1>The New Way to Learn - VR Math Learning</h1>
+        <p class="tagline">Immersive Education for the Next Generation</p>
     </header>
-    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="hero">
         <h2>Revolutionizing Early Education with VR & Interactive Games</h2>
         <p>Welcome to the future of learning! Our platform provides Virtual Reality-based education and interactive math games for students from KG to Class 3.</p>
-        
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>Immersive VR learning experience</li>
-            <li>Engaging math games for better understanding</li>
-            <li>Hands-on learning approach</li>
-            <li>Proven success in early childhood education</li>
-        </ul>
-        
+        <a href="#contact" class="cta-button">Join Us Today</a>
+    </section>
+    
+    <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery-container">
             <div id="gallery" class="gallery">
@@ -34,27 +39,29 @@
                 <img src="images/kids_learning_6.jpg" alt="Kids Learning">
             </div>
         </div>
-        
-        <h2>Our Presence</h2>
-        <p>We have two offline experience centers located in:</p>
-        <ul>
-            <li>Albany, NY</li>
-            <li>New York City, NY</li>
-        </ul>
-        
-        <div id="map"></div>
-        
+    </section>
+    
+    <section id="partners">
         <h2>Our Partners</h2>
-        <div id="partners" class="partners">
+        <div class="partners">
             <img src="images/western_panthers_logo.svg" alt="Western Panthers">
             <img src="images/hamilton_heights_logo.png" alt="Hamilton Heights">
         </div>
-        
-        <h2>Join Us!</h2>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
         <p>We are looking for more schools to partner with us and bring innovative learning solutions to more students.</p>
-        
-        <a href="#" class="cta-button">Partner With Us</a>
-    </div>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 The New Way to Learn. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
